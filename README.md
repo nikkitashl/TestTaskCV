@@ -12,7 +12,7 @@
 ```bash
 python run.py [--device cpu] [--flash_attention true] [--model_version 2.2] [--output_name mix.png] [--output_width 512] [--output_height 512] img1.jpg img2.jpg
 ```
-Выходное изображение будет записано в файл `mix.png`.
+Выходное изображение будет записано в файл `output_name` параметр, который по умолчанию `mix.png`.
 
 ## Примеры работы программы
 
