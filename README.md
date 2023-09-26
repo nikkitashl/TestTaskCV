@@ -22,18 +22,18 @@ python run.py [--device cpu] [--flash_attention true] [--model_version 2.2] img1
 
 | Левое | Правое |
 | -- | --- |
-| ![alt text](imgs/image1.jpeg "Left") | ![alt text](imgs/image2.jpeg "Right") |
+| ![Left](imgs/image1.jpeg "Left") | ![Right](imgs/image2.jpeg "Right") |
 
 Результат:
 
-![alt text](imgs/mix1.png "First mix")
+![First mix](imgs/mix1.png "First mix")
 
 2. Исходные изображения:
 
 | Левое | Правое |
 | -- | --- |
-| ![alt text](imgs/image3.jpeg "Left") | ![alt text](imgs/image4.jpeg "Right") |
+| ![Left](imgs/image3.jpeg "Left") | ![Right](imgs/image4.jpeg "Right") |
 
 Результат:
 
-![alt text](mix2.png "Second mix")
+![Second mix](imgs/mix2.png "Second mix")
