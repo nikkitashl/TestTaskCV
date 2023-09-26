@@ -19,6 +19,9 @@ if __name__ == "__main__":
     parser.add_argument("--device", default="cuda", type=str)
     parser.add_argument("--model_version", default="2.2", type=str)
     parser.add_argument("--flash_attention", action="store_true")
+    parser.add_argument("--output_name", default="mix.png", type=str)
+    parser.add_argument("--output_height", default=512, type=int)
+    parser.add_argument("--output_width", default=512, type=int)
 
     args = parser.parse_args()
     
@@ -33,9 +36,9 @@ if __name__ == "__main__":
         decoder_steps=30,
         prior_steps=50,
         batch_size=1,
-        h=512, 
-        w=512,
+        h=args.output_height, 
+        w=args.output_width,
     )[0]
 
-    image_mixed.save("mixed.png")
+    image_mixed.save(args.output_name)
 
