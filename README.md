@@ -19,7 +19,7 @@
 
 Для запуска смешивания есть файл `run.py`, который запускается следующим образом (выделенное в квадратные скобки - опционально и можно опустить):
 ```bash
-python run.py [--device cpu] [--flash_attention true] [--output_name mix.png] [--output_width 512] [--output_height 512] img1.jpg img2.jpg
+python run.py [--device cpu] [--flash_attention true] [--output_name mix.png] [--output_width 512] [--output_height 512] [--random_state 42] img1.jpg img2.jpg
 ```
 Выходное изображение будет записано в файл `output_name` параметр, который по умолчанию `mix.png`.
 

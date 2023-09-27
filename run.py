@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from kandinsky2 import get_kandinsky2
 from PIL import Image
+import pytorch_lightning as pl
 
 
 def load_model(device, use_flash_attention=True, cache="/tmp/kandinsky2"):
@@ -21,11 +22,13 @@ if __name__ == "__main__":
     parser.add_argument("--output_name", default="mix.png", type=str)
     parser.add_argument("--output_height", default=512, type=int)
     parser.add_argument("--output_width", default=512, type=int)
+    parser.add_argument("--random_state", default=42, type=int)
 
     args = parser.parse_args()
     
     assert len(args.images) == 2, "We only works with two images!"
     
+    pl.seed_everything(args.random_state)
     images = [Image.open(path) for path in args.images]
     
     model = load_model(args.device, args.flash_attention)
