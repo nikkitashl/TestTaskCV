@@ -13,6 +13,8 @@
 2. [Установить](https://pip.pypa.io/en/stable/installation/) `pip`.
 3. Установить зависимости из `requirements.txt` - `pip install -r requirements.txt`.
 
+Если же необходимо изолировать запуск в Docker, то необходимый контейнер можно найти в каталоге NVIDIA NGC [тут](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).
+
 ## Как запустить
 
 Для запуска смешивания есть файл `run.py`, который запускается следующим образом (выделенное в квадратные скобки - опционально и можно опустить):
